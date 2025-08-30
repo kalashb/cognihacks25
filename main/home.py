@@ -1,4 +1,9 @@
 import streamlit as st
+from intense_study import intense_study_mode
+from casual_study import casual_study_mode
+from casual_browsing import casual_browsing_mode
+from meditation import meditation_mode
+from puzzles import puzzles_mode
 
 st.title("Focus Mode Selector")
 
@@ -14,17 +19,12 @@ mode = st.sidebar.radio(
 )
 
 if mode == "Intense Study Mode":
-    st.header("Intense Study Mode")
-    st.write("Maximize your focus. All distractions are minimized.")
+    intense_study_mode()
 elif mode == "Casual Study Mode":
-    st.header("Casual Study Mode")
-    st.write("Study at your own pace with light background music.")
+    casual_study_mode()
 elif mode == "Casual Browsing":
-    st.header("Casual Browsing")
-    st.write("Relax and browse content freely.")
+    casual_browsing_mode()
 elif mode == "Meditate":
-    st.header("Meditate")
-    st.write("Take a break and meditate. Breathe in, breathe out.")
+    meditation_mode()
 elif mode == "Brain Puzzles":
-    st.header("Brain Puzzles")
-    st.write("Challenge yourself with fun brain puzzles!")
+    puzzles_mode()
